@@ -18,14 +18,24 @@
                                 <ComboBoxItem Content="Bolek" />
                                 <ComboBoxItem Content="Lolek"/>
                         </ComboBox>
-                        <Image Source="../Assets/bolek.jpg"></Image>
+                        <Image Source="../Assets/bolek.jpg" Height="100px" Width="100px"></Image>
+                        <Image Source="../Assets/lolek.jpg" Height="100px" Width="100px"></Image>
                 </StackPanel>
                 <StackPanel>
-                <TextBlock>Priorytet</TextBlock>
-                <RadioButton>Niski</RadioButton>
-                <RadioButton>Średni</RadioButton>
-                <RadioButton>Wysoki</RadioButton>
+                        <RadioButton Content="Niski" GroupName="PriorityGroup" IsChecked="True"/>
+                        <RadioButton Content="Średni" GroupName="PriorityGroup" Margin="10,0"/>
+                        <RadioButton Content="Wysoki" GroupName="PriorityGroup" Margin="10,0"/>
                 </StackPanel>
+           
+                
+                <StackPanel>
+                <TextBlock Text="Dodatkowe opcje:" />
+                        <CheckBox x:Name="OutsideCheckBox" Content="Na dworze" Margin="0,0,10,0"/>
+                        <CheckBox x:Name="EquipmentCheckBox" Content="Potrzebny sprzęt" Margin="0,0,10,0"/>
+                        <CheckBox x:Name="WithFriendsCheckBox" Content="Z kolegami"/>
+                </StackPanel>
+                
+
         </StackPanel>
         
 </Window>
