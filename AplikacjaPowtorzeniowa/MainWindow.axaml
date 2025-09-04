@@ -11,15 +11,15 @@
                         <TextBox Watermark="napisz zadanie..." Width="200" Margin="20">
                         </TextBox>
                 
-                        <Button Content="Dodaj" Margin="20"></Button>
+                        <Button Content="Dodaj" Margin="20" Click="AddTask"></Button>
                 </StackPanel>
                 <StackPanel>
                         <ComboBox Margin="20">
                                 <ComboBoxItem Content="Bolek" />
                                 <ComboBoxItem Content="Lolek"/>
                         </ComboBox>
-                        <Image Source="../Assets/bolek.jpg" Height="100px" Width="100px"></Image>
-                        <Image Source="../Assets/lolek.jpg" Height="100px" Width="100px"></Image>
+                        <Image Source="../Assets/bolek.jpg" Height="250" Width="250"></Image>
+                        <Image Source="../Assets/lolek.jpg" Height="250" Width="250"></Image>
                 </StackPanel>
                 <StackPanel>
                         <RadioButton Content="Niski" GroupName="PriorityGroup" IsChecked="True"/>
@@ -34,7 +34,17 @@
                         <CheckBox x:Name="EquipmentCheckBox" Content="Potrzebny sprzęt" Margin="0,0,10,0"/>
                         <CheckBox x:Name="WithFriendsCheckBox" Content="Z kolegami"/>
                 </StackPanel>
+                <TextBlock Text="Wybierz datę:" Margin="0,10,0,0"/>
+                <Calendar x:Name="TaskCalendar" Width="300"/>
                 
+                <TextBlock Text="Lista zadań:" Margin="0,20,0,5"/>
+                <ListBox x:Name="TasksListBox" Width="450" Height="150"/>
+                
+                <Button Content="Usuń zaznaczone" Width="150" Margin="0,10,0,0" Click="RemoveTask"/>
+
+                
+                <Button Content="Podsumowanie dnia" Width="200" Margin="0,20,0,0" Click="OpenSummary"/>
+
 
         </StackPanel>
         
