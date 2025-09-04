@@ -1,5 +1,31 @@
 <Window xmlns="https://github.com/avaloniaui"
-
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AplikacjaPowtorzeniowa.MainWindow"
         Title="AplikacjaPowtorzeniowa">
-
+    
+        <StackPanel HorizontalAlignment="Center">
+                <StackPanel >
+                        <TextBox Watermark="napisz zadanie..." Width="200" Margin="20">
+                        </TextBox>
+                
+                        <Button Content="Dodaj" Margin="20"></Button>
+                </StackPanel>
+                <StackPanel>
+                        <ComboBox Margin="20">
+                                <ComboBoxItem Content="Bolek" />
+                                <ComboBoxItem Content="Lolek"/>
+                        </ComboBox>
+                        <Image Source="../Assets/bolek.jpg"></Image>
+                </StackPanel>
+                <StackPanel>
+                <TextBlock>Priorytet</TextBlock>
+                <RadioButton>Niski</RadioButton>
+                <RadioButton>Średni</RadioButton>
+                <RadioButton>Wysoki</RadioButton>
+                </StackPanel>
+        </StackPanel>
+        
 </Window>
